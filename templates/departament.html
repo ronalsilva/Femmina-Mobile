@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="pt-br">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <vtex:metaTags/>
+    
+    <vtex:template id="mobile-commonHead" />
+</head>
+
+<body>  
+    <div class="all">
+        <vtex:template id="mobile-header" />
+        
+        <div id="mainContent">
+            <div class="wrapper">
+                <div class="topName dept">
+                    <vtex.cmc:searchTitle />
+                </div>
+                
+                <div class="menuDept">
+                    <vtex.cmc:singleDepartmentNavigator/>   
+                </div>
+                    
+                <section class="featuredBanners">
+                    <vtex:contentPlaceHolder id="Banners em destaque" />
+                </section> 
+            
+                <div class="pageContent">
+
+                    <section class="featuredCategories">
+                        <h2 class="sectionTitle">Categorias</h2>
+                        <div class="carouselGallery">
+                            <vtex:contentPlaceHolder id="Categorias em destaque" />
+                        </div>
+                    </section> 
+
+                    <section class="featuredProducts">
+                        <vtex:contentPlaceHolder id="Coleções em destaque" />
+                    </section> 
+                </div>
+            </div>
+        </div>
+        
+        <vtex:template id="mobile-footer" />
+    </div><!-- all -->
+    
+    <vtex:template id="mobile-commonBottom" />
+</body>
+</html>

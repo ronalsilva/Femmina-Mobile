@@ -1,0 +1,147 @@
+#searchFilter{
+    .lightboxHeader{
+        font-size: rem(15px);
+        text-transform: uppercase;
+
+        i{
+        	margin-right: 5px;
+        }
+    }
+}
+
+.filterRefine{
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	background: $filterRefineBoxBg;
+	padding: 15px;
+
+	.bt-refinar{
+	    background: $color5;
+	    color: $white;
+	    font: rem(16px) $font1;
+	    text-transform: uppercase;
+	    padding: 13px;
+	    text-align: center;
+	    display: block;
+	    font-weight: 300;
+	    border-radius: 3px;
+		transition: all .3s linear;
+		letter-spacing: 1px;
+		
+		&.enabled{
+			opacity: 1;
+		}
+	}
+
+	.msgError{
+		margin-bottom: 10px;
+		color: $errorColor;
+	}
+}
+
+.search-single-navigator{
+	display: none !important;
+}
+
+.search-multiple-navigator{
+	display: block !important;
+	color: $refineSearchTxtColor;
+
+	h3, h4{display: none;}
+
+	fieldset{
+		border-bottom: 1px solid #e5e5e5;
+		&:last-child {
+			border-bottom: 0px;
+		}
+	}
+
+	h5 {
+		font: $refineSearchItemFont;
+		text-transform: uppercase;
+		padding: 15px;
+		font-weight: 300;
+		color: $color1;
+		font-style: italic;
+		position: relative;
+
+		&:after {
+			content: "\e911";
+			display: block;
+			position: absolute;
+			right: 22px;
+		    top: 20px;
+		    color: $color3;
+
+		    font-family: 'icomoon';
+		    speak: none;
+		    font-style: normal;
+		    font-weight: normal;
+		    font-variant: normal;
+		    text-transform: none;
+		    line-height: 1;
+
+		    /* Better Font Rendering =========== */
+		    -webkit-font-smoothing: antialiased;
+		    -moz-osx-font-smoothing: grayscale;
+		}
+	}
+
+	fieldset{
+		&.active {
+			h5 {
+				&:after {
+					transform: rotate(90deg);
+				}
+			}
+			div {
+				display: block;
+			}
+		}
+
+        div {
+        //     label {
+        //         padding: 3.6px 0;
+        //         font: rem(13px) $font2; 
+        //         &:before {
+        //             content: "";
+        //             display: inline-block;
+				    // background: url(/arquivos/icon-chekcdFilter.png) no-repeat 0px 0px;
+				    // width: 26px;
+				    // height: 25px;
+        //             vertical-align: middle;
+        //             margin-right: 8px;
+        //             margin-bottom: 3px;
+        //         }
+        //         &.sr_selected {
+        //             &:before {
+        //                 background: url('/arquivos/icon-chekcdFilter2.png') no-repeat 0 0;
+        //             }
+        //         }
+        //         input {
+        //             display: none;
+        //         }
+        //     }
+        }
+	}
+
+	div {
+		display: none;
+		&.filterRefine {
+			display: block;
+		}
+	}
+
+	label {
+		width: 100%;
+		margin: 0 0 10px 0;
+	}
+
+	.ver-filtros{
+		display: block;
+		text-decoration: underline;
+		color: $baseLinkColor;
+	}
+}

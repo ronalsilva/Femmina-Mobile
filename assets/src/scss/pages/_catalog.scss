@@ -1,0 +1,1120 @@
+/* ==========================================================================
+   Catalog
+   ========================================================================== */
+/*titulo pagina*/
+.topName{
+	position: relative;
+	padding: 15px 25px;
+	border-bottom: 1px solid $pageTopColorBorder;
+
+	.bread-crumb{
+		float: left;
+		.last, li:first-child{
+			display: none;
+		}
+		li {
+			a {
+				color: $color5;
+				font: 5vw $font1;
+				text-transform: uppercase;
+				font-weight: bold;
+			}
+			&:after{
+				content: "/";
+				display: inline-block;
+			    vertical-align: baseline;
+			    margin-left: 10px;
+			    color: $color5;
+			}
+		}
+	}
+
+	.titulo-sessao, .resultado-busca-termo, .bread-crumb li{
+		@extend %pageTitle;
+	}
+
+	.titulo-sessao{
+		float: left;
+		color: $color5;
+		font: 5vw $font1;
+		text-transform: uppercase;
+		font-weight: bold;
+		padding: 0;
+		.icon-arrow{
+			position: absolute;
+			right: 0;
+			top: 20px;
+			font-size: rem(16px);
+			@include transform(rotate(90deg));
+
+			&.open{
+				@include transform(rotate(-90deg));
+			}
+		}
+	}
+}
+
+
+/*menu departamento*/
+.menuDept{
+	display: none;
+	@extend %baseMenu;
+	@extend %filterMenu;
+
+	&.active{
+		display: block;
+	}
+}
+
+
+/*titulo sessao*/
+.sectionTitle{
+	@extend %sectionTitle;
+}
+
+
+/*titulo busca*/
+.resultado-busca-termo{
+	float: left;
+
+	&:before, &:after{
+		content: '"';
+		display: inline-block;
+		vertical-align: top;
+	}
+}
+
+
+/*numero de resultados */
+.resultado-busca-numero{
+	background: $resultNumberBg;
+	border-radius: 8px;
+	color: $resultNumberColor;
+	padding: 5px;
+	float: right;
+
+	&:after{
+		content:"resultados";
+		display: inline-block;
+		vertical-align: middle;
+		margin-left: 3px;
+	}
+}
+
+
+/*banners destaque*/
+.featuredCategories{
+	margin: 20px 0;
+
+	a{
+		text-align: center;
+		color: $baseFontColor;
+		display: block;
+		font-size: rem(16px);
+	}
+}
+
+
+/*listagem*/
+.resultado-busca-numero, .resultado-busca-numero .label, .resultado-busca-termo, .resultado-busca-termo .label, 
+.resultado-busca-tempo, .filterBy, .pager, .sub:last-child, .compare, 
+.menu-navegue, .refino-marca{display: none;}
+
+
+/*filtros opçoes*/
+.filterOptions{
+	margin: 15px 0;
+}
+.refineSearch{
+	clear: both;
+	background: transparent;
+    color: $white;
+    font: rem(16px) $font2;
+    text-transform: capitalize;
+    padding: 13px;
+    text-align: center;
+    display: block;
+    font-weight: 300;
+    border-radius: 3px;
+    border: 1px solid $color6;
+    color: $color4;
+    font-weight: 700;
+
+	i{
+		font-size: rem(16px);
+		margin-right: 10px;
+	}
+}
+
+
+/*ordernar*/
+.orderBy{
+	margin-bottom: 15px;
+	float: left;
+	label{
+		display: none;
+	}
+
+	select{
+		font-family: $font2;
+		width: 100%;
+		padding: 10px;
+		border: 1px solid $color6;
+		border-radius: 0;
+		color: $color4;
+		box-shadow: none;
+		font-weight: 700;
+		font-style: italic;
+	}
+}
+
+
+/*change view*/
+.selectView{
+	background: $selectViewColorBg;
+	border-radius: 3px;
+	display: inline-block;
+	float: right;
+	@include transition(all ease 0.3s);
+
+	span{
+		display: inline-block;
+		vertical-align: top;
+		background: $selectViewColorBtBg;
+		border-radius: 3px;
+		font-size: 0;
+		width: 40px;
+		height: 40px;
+		text-align: center;
+		color: $selectViewColorBtTxt;
+		@include transition(all ease 0.3s);
+	}
+
+	i{
+		font-size: rem(25px);
+		display: block;
+		line-height: 40px;
+	}
+
+	.active{
+		background: $selectViewColorBtActiveBg; 
+		color: $selectViewColorBtActiveTxt;
+
+		@include box-shadow(inset 0px -2px 0 $selectViewColorBg);
+	}
+}
+
+
+/*smart research*/
+.seeMore{
+    background: $color5;
+    color: $white;
+    font: rem(16px) $font1;
+    text-transform: uppercase;
+    padding: 13px;
+    display: block;
+    font-weight: 300;
+    border-radius: 3px;
+
+	width: 100%;
+	margin: -20px 0 50px;
+	text-align: center;
+	cursor: pointer;
+	clear: both;
+}
+
+#returnToTop{
+	display: none !important;
+}
+
+body.catalog {
+	.pageContent {
+		padding: 0 10px;
+	}
+	#searchFilter {
+		.lightboxContent {
+			background: $white;
+			.lightboxAction {
+				span {
+					i {
+						color: $color1;
+					}
+				}
+			}
+			.lightboxContentInner {
+				.lightboxHeader {
+					background: $white;
+					color: $color1;
+					text-transform: capitalize;
+					padding: 11px;
+					text-align: center;
+					border: 1px solid #e5e5e5;
+					font-size: 18px;
+				}
+			}
+		}
+	}
+}
+/*busca*/
+body.search-result{
+	.titulo-sessao, .searchResultsTime .resultado-busca-tempo, .vitrine + .searchResultsTime, 
+	.search-multiple-navigator h3, .search-multiple-navigator h4{
+		display: none;
+	}
+
+	.topName {
+		.resultado-busca-termo {
+			&:before,
+			&:after {
+				display: none;
+			}
+			&.hasResult {
+				.label {
+					display: block;
+					font: rem(18px) $font2;
+					color: $color1;
+					font-weight: 600;
+				}
+				.value {
+					text-transform: uppercase;
+					font: rem(27px) $font1;
+					color: $color5;
+				    display: block;
+				    font-weight: bold;
+				    margin-top: -8px;
+					&:before,
+					&:after {
+						content: "\"";
+					}
+				}
+			}
+		}
+		.resultado-busca-numero {
+			margin-top: 26px; 
+			.value {
+				vertical-align: bottom;
+			}
+		}
+	}
+
+	.bread-crumb{
+		float: left;
+	}
+
+	.resultado-busca-termo.hasResult, .resultado-busca-numero{
+		display: block;
+	}
+
+	.shelf li {
+		width: 46%;
+	}
+
+	.search-single-navigator{
+		display: block !important;
+		h3 {
+			a{
+				font: $refineSearchItemFont;
+				text-transform: uppercase;
+				padding: 15px;
+				font-weight: 300;
+				color: $color1;
+				font-style: italic;
+				position: relative;
+
+				&:after {
+					content: "\e911";
+					display: block;
+					position: absolute;
+					right: 14px;
+				    top: 27px;
+				    color: $color3;
+
+				    font-family: 'icomoon';
+				    speak: none;
+				    font-style: normal;
+				    font-weight: normal;
+				    font-variant: normal;
+				    text-transform: none;
+				    line-height: 1;
+
+				    /* Better Font Rendering =========== */
+				    -webkit-font-smoothing: antialiased;
+				    -moz-osx-font-smoothing: grayscale;
+				}
+			}
+		}
+		h5, h5 + ul{
+			display: none;
+		}
+	}
+}
+
+
+/*busca vazia*/
+body.empty-search{
+	.emptySearch {
+		h2 {
+			@extend %pageTitle;
+			font-size: rem(17px);
+			padding: 0 0 0 60px;
+			line-height: 1.2;
+
+			&:before{
+				content: "\e90f";
+				font-family: 'icomoon';
+			    speak: none;
+			    font-style: normal;
+			    font-weight: normal;
+			    font-variant: normal;
+			    text-transform: none;
+			    line-height: 1;
+
+			    /* Better Font Rendering =========== */
+			    -webkit-font-smoothing: antialiased;
+			    -moz-osx-font-smoothing: grayscale;
+			    background: #fff;
+			    position: absolute;
+			    left: 0;
+				border-radius: 50%;
+				padding: 15px;
+				top: 10px;
+			}
+
+			.searchTerm{
+				font-weight: bold;
+			}
+		}
+	}
+
+	.newSearch{
+
+	}
+
+	.backHome{
+		display: block;
+		@extend %secondaryButton;
+		margin: 20px 0;
+	}
+
+}
+
+
+
+// Lista de desejos
+
+body {
+	&.giftlist {
+		.topName {
+			h1 {
+				padding: 0 27px;
+				font: rem(20px) $font1;
+				text-transform: uppercase;
+				font-weight: bold;
+				color: $color5;
+			}
+		}
+		.create__list {
+			padding: 10px 29px;
+		}
+		#mainContent {
+			.GiftList__content {
+				padding: 10px;
+				.GiftList__content--text {
+					h2 {
+						font: rem(21px) $font1;
+						text-transform: uppercase;
+						color: $color5;
+						font-weight: bold;
+						padding: 30px 0 20px 0;
+						text-align: center;
+					}
+					p {
+						width: 93%;
+					    margin: 0 auto;
+					    font: rem(15px) $font2;
+					    color: $color1;
+					    line-height: 18px;
+					}
+				}
+				.GiftList__content--btn {
+					a {
+						display: block;
+						width: 93%;
+						background: $color5;
+						text-align: center;
+					    padding: 10px;
+					    margin: 20px auto;
+					    color: $white;
+					    font: rem(17px) $font2;
+					    font-weight: bold;
+					    text-transform: uppercase;
+					}
+				}
+			}
+		}
+
+		&.create  {
+			.create__list {
+				padding: 10px 29px;
+				.create__list--form {
+					#giftlistformwrapper {
+						#giftlistform {
+							.basic {
+								ul.giftlistul {
+									li {
+										&.giftlisttype {
+											display: none;
+										}
+										#giftlistname-obr,
+										#giftlisturl-obr {
+											display: none;
+										}
+										&.giftlisturl {
+											label {
+												padding: 15px 0 0px;
+											}
+											.url-site {
+												display: block;
+											    padding-bottom: 10px;
+											    padding-top: 3px;
+												font: rem(13px) $font2;
+												color: #999;
+											}
+										}
+										label {
+											display: block;
+											padding: 15px 0 5px;
+											font: rem(13px) $font2;
+											color: #999;
+										}
+										input,
+										select {
+											display: block;
+											width: 100%;
+											padding: 10px;
+											border: 1px solid #ccc;
+											box-shadow: none;
+											color: $black;
+											font: rem(18px) $font2;
+											font-weight: bold;
+										}
+										&.visibility {
+											display: none;
+										}
+									}
+								}
+							}
+							.image {
+								display: none;
+							}
+							#members-box {
+								display: none !important;
+								h2 {
+									padding: 20px 0 10px;
+									font: rem(18px) $font1;
+									text-transform: uppercase;
+									color: $color5;
+								}
+								.member-range {
+									text-transform: capitalize;
+									font-family: $font2;
+									padding-bottom: 10px;
+								}
+								.giftlistmember-add {
+									width: 100%;
+									a {
+										padding: 10px;
+										display: block;
+										background: #ccc;
+										color: $black;
+										font-family: $font2;
+										text-align: center;
+										width: 150px;
+										margin: 20px auto;										
+									}
+								}
+								.gl-members {
+									ul.giftlistul {
+										li {
+											.obr {
+												display: none;
+											}
+											label {
+												display: block;
+												padding: 15px 0 5px;
+												font: rem(13px) $font2;
+											}
+											input,
+											select {
+												display: block;
+												width: 100%;
+												padding: 10px;
+												border: 1px solid #ccc;
+												box-shadow: none;
+											}
+										}
+									}
+								}
+							}
+							.therms-area {
+								padding-top: 30px;
+								>h2 {
+									display: none;
+								}
+								#therms-accept {
+									padding-top: 10px;
+								}
+							}
+							.action-area {
+								margin: 20px 0 0px;
+								width: 100%;
+								.form-action {
+
+									li {
+									    &.cancel {
+										    display: block;
+										    width: 100%;
+										    margin-bottom: 15px;
+										    .button {
+											    border: 1px solid $color6;
+											    background: $white;
+											    color: $color4;
+										    }
+									    }
+									    &.save {
+										    display: block;
+										    width: 100%;
+									    }
+										.button {
+											width: 100%;
+											background: $color5;
+											padding: 10px;
+											text-align: center;
+											border: none;
+											color: $white;
+											font: rem(14px) $font2;
+											text-transform: uppercase;
+											font-weight: bold;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		&.giftlist {
+			#mainContent {
+				padding-bottom: 50px;
+			}
+			.GiftList__manage {
+				.glmanager-type{
+					display: none;
+
+					&.giftlisttype-4{
+						display: block;
+					}
+				}
+
+			    .GiftList__manage {
+			        &--newList {
+			        	margin: 20px 0 24px;
+			        	padding: 0 25px;
+
+			            a {
+						    background: $color5;
+						    color: #fff;
+						    font-weight: bold;
+						    font: rem(15px) $font2;
+						    text-transform: uppercase;
+						    padding: 13px;
+						    text-align: center;
+						    display: block;
+						    font-weight: 300;
+						    border-radius: 3px;
+			            }
+			        }
+
+			        &--myList {
+			            .giftlist-action {
+			                display: none;
+			            }
+
+			            .giftlist {
+			                .glmanager-type {
+			                    h2 {
+			                        display: none;
+			                    }
+			                }
+			                .giftlist-table {
+			                    width: 100%;
+			                    border-collapse: collapse;
+
+			                    tr {
+			                        border-bottom: 1px solid #e5e5e5;
+			                        display: block;
+			                        width: 100%;
+			                        
+			                        &:first-child {
+			                            border-top: 1px solid #e5e5e5;
+			                        }
+			                    }
+
+			                    .giftlist-body-name {
+			                        display: block;
+			                        font-size: rem(14px);
+			                        position: relative;
+			                        width: 100%;
+			                        padding: 15px;
+									font-weight: 300;
+			                    	letter-spacing: 2px;
+			                    	text-transform: uppercase;
+
+			                    	&.active {
+										&:after {
+				                            transform: rotate(0deg); 
+				                        }
+			                    	}
+
+			                        a{
+			                        	color: $color1;
+			                            margin-bottom: 10px;
+			                        }
+			                        
+			                        &:after {
+			                        	content: "\e911";
+			                        	font-family: 'icomoon' !important;
+									    speak: none;
+									    font-style: normal;
+									    font-weight: normal;
+									    font-variant: normal;
+									    text-transform: none;
+									    line-height: 1;
+
+									    /* Better Font Rendering =========== */
+									    -webkit-font-smoothing: antialiased;
+									    -moz-osx-font-smoothing: grayscale;
+			                            position: absolute;
+			                            right: 8px;
+			                            top: 18px;
+			                            color: #b3b3b3;
+			                            transform: rotate(90deg); 
+			                        }
+			                    }
+
+			                    .giftlist-body-member {
+			                    	display: none;
+			                    }
+
+			                    .giftlist-body-action {
+			                        display: none;
+			                        width: 100%;
+			                    	padding: 15px;
+
+			                        &.active {
+			                            display: block;
+			                        }
+			                    }
+
+			                    .glmanager-actions {
+			                        li {
+			                        	display: inline-block;
+			                        	vertical-align: middle;
+			                        	width: 46.5%;
+			                        	margin-bottom: 3%;
+
+			                        	&:nth-child(even){
+			                        		margin-right: 3%;
+			                        	}
+
+			                        	&.action-view,
+			                        	&.action-edit {
+			                        		margin-right: 13px;
+			                        	}
+
+			                            a {
+											background: $white;
+										    font: rem(14px) $font2;
+										    font-weight: 600;
+										    padding: 13px;
+										    text-align: center;
+										    display: block;
+										    border-radius: 3px;
+										    border: 1px solid $color6;
+			                                color: $color4;
+			                                position: relative;
+			                        		&:before {
+				                        		content: "\e912";
+				                        		display: inline-block;
+				                        		color: $color4; 
+
+											    font-family: 'icomoon';
+											    speak: none;
+											    font-style: normal;
+											    font-weight: normal;
+											    font-variant: normal;
+											    text-transform: none;
+											    line-height: 1;
+
+											    /* Better Font Rendering =========== */
+											    -webkit-font-smoothing: antialiased;
+											    -moz-osx-font-smoothing: grayscale;
+
+											    position: absolute;
+											    left: 12px;
+											    top: 10px;
+											    font-size: 25px;
+			                        		}
+			                            }
+			                            &.action-view {
+			                            	a {
+			                            		&:before {
+			                            			content: "\e914";
+			                            		}
+			                            	}
+			                            }
+			                            &.action-manage {
+			                            	a {
+			                            		&:before {
+			                            			content: "\e908";
+			                            		}
+			                            	}
+			                            }
+			                            &.action-manage {
+			                            	a {
+			                            		&:before {
+			                            			content: "\e908";
+			                            		}
+			                            	}
+			                            }
+			                            &.action-delete{
+			                            	a{
+			                            		background: transparent;
+			                            		color: $color6;
+			                            		border: none;
+
+			                            		&:before {
+			                            			content: "X";
+			                            			font-family: $font2;
+			                            			color: $color6;
+			                            			left: 30px;
+			                            		}
+				                            }
+			                            }
+
+			                            &.action-buy {
+			                                width: 100%;    
+
+			                                a {
+			                                    @extend %buyActionButton;
+			                                }                               
+			                            }
+			                        }
+			                    }
+			                }
+
+			                .giftlist-table .action-share,.giftlist-table thead,.giftlist-table .giftlist-body-desired,.giftlist-table .action-buy,.giftlist-table .action-view  {
+			                    display: none;
+			                }
+			            }
+			        }
+			    }
+			}
+		}
+		&.edit{
+			
+		    .form-action{
+		        margin-top: 20px
+		    }
+
+		    .giftlisttype{
+		        display: none;
+		    }
+
+			#giftlistform {
+				.basic {
+					ul.giftlistul {
+						li {
+							#giftlistname-obr,
+							#giftlisturl-obr {
+								display: none;
+							}
+							label {
+								display: block;
+								padding: 15px 0 5px;
+								font: rem(13px) $font2;
+							}
+							input,
+							select {
+								display: block;
+								width: 100%;
+								padding: 10px;
+								border: 1px solid #ccc;
+								box-shadow: none;
+							}
+							&.visibility {
+								display: none;
+							}
+						}
+					}
+				}
+				.image {
+					display: none;
+				}
+				#members-box {
+					display: none;
+					h2 {
+						padding: 20px 0 10px;
+						font: rem(18px) $font1;
+						text-transform: uppercase;
+						color: $color5;
+					}
+					.member-range {
+						text-transform: capitalize;
+						font-family: $font2;
+						padding-bottom: 10px;
+					}
+					.giftlistmember-add {
+						width: 100%;
+						a {
+							padding: 10px;
+							display: block;
+							background: #ccc;
+							color: $black;
+							font-family: $font2;
+							text-align: center;
+							width: 150px;
+							margin: 20px auto;										
+						}
+					}
+					.gl-members {
+						ul.giftlistul {
+							li {
+								.obr {
+									display: none;
+								}
+								label {
+									display: block;
+									padding: 15px 0 5px;
+									font: rem(13px) $font2;
+								}
+								input,
+								select {
+									display: block;
+									width: 100%;
+									padding: 10px;
+									border: 1px solid #ccc;
+									box-shadow: none;
+								}
+							}
+						}
+					}
+				}
+				.therms-area {
+					>h2 {
+						display: none;
+					}
+				}
+				.action-area {
+					margin: 20px 0 50px;
+					width: 100%;
+					.form-action {
+
+						li {
+						    &.cancel {
+							    display: block;
+							    width: 100%;
+							    margin-bottom: 15px;
+							    .button {
+								    border: 1px solid $color6;
+								    background: $white;
+								    color: $color4;
+							    }
+						    }
+						    &.save {
+							    display: block;
+							    width: 100%;
+						    }
+							.button {
+								width: 100%;
+								background: $color5;
+								padding: 10px;
+								text-align: center;
+								border: none;
+								color: $white;
+								font: rem(14px) $font2;
+								text-transform: uppercase;
+								font-weight: bold;
+							}
+						}
+					}
+				}
+			}
+		}
+		&.product {
+			.GiftList__product {
+			    .GiftList__product--list {
+			        .giftlistinfo-description {
+						font: rem(20px) $font1;
+						text-transform: uppercase;
+						font-weight: bold;
+						color: $color5;
+			            position: absolute;
+					    margin-top: -38px;
+					    margin-left: 0px;
+			        }
+
+			        .giftlistinfo-title, .giftlistinfo-actions, .giftlistinfo-members, .giftlistinfo-image,.giftlistinfo-link, .giftlistinfo-message, label {
+			            display: none;
+			        }
+			    }
+
+			    .GiftList__product--status {
+			        display: none;
+			    }
+
+			    .giftlistsku {
+			        .giftlistproductsv2-gridwrapper {
+			            table.giftlistproductsv2 {
+			                width: 100%;
+							border-top: 1px solid #f3f3f3;
+							margin-top: 12px;
+			                &:first-child {
+			                	border-top: 0px solid #f3f3f3;
+			                }
+
+			                thead {
+			                    display: none;
+			                }
+
+			                tbody {
+			                    tr {
+			                        width: 100%;
+			                        border-bottom: 1px solid red;
+			                        padding-bottom: 40px;
+
+			                        td{
+			                            vertical-align: top;
+			                        }
+
+			                        td.name {
+			                            display: block;
+			                            padding-top: 15px;
+			                            width: 180px;
+			                            font-family: $font2;
+			                            
+			                            a {
+			                                color: $color1;
+			                            }
+			                        }
+
+			                        td.price {
+			                            color: $color3;
+			                            font-family: $font2;
+			                            display: block;
+			                            padding-top: 8px;
+			                           	font-weight: 600;
+			                        }
+
+			                        td.image {
+			                            margin: 0;
+			                            padding: 25px 0;
+			                        }
+
+			                        td.purchased {
+			                            display: none;
+			                        }
+
+			                        td.wished {
+			                            display: block;
+			                            padding-top: 8px;
+			                            width: 100%;
+			                            
+			                            input {
+			                                border: 1px solid $color2;
+			                                padding: 4px;
+			                                text-align: center;
+			                                width: 30px;
+			                            }
+
+			                            a {
+			                                color: $color4;
+			                                padding-left: 7px;
+			                                text-decoration: underline;
+			                                text-transform: capitalize;
+			                            }
+			                        }
+			                        td.actions {
+			                            display: block;
+			                            position: absolute;
+			                            font-size: 0;
+			                            right: 10px;
+			                            display: none;
+
+			                            a {
+			                                display: block;
+			                                color: $color5;
+
+			                                &:after{
+			                                    content: "\e912";
+			                                    font-family: 'icomoon' !important;
+			                                    display: inline-block;
+			                                    vertical-align: middle;
+			                                    font-size: rem(20px);
+			                                    margin-left: 5px;
+			                                    speak: none;
+			                                    font-style: normal;
+			                                    font-weight: normal;
+			                                    font-variant: normal;
+			                                    text-transform: none;
+			                                    line-height: 1;
+			                                    /* Better Font Rendering =========== */
+			                                    -webkit-font-smoothing: antialiased;
+			                                    -moz-osx-font-smoothing: grayscale;
+			                                }
+
+			                            }
+			                        }
+			                        td.checkuncheck {
+			                            display: block;
+			                            float: right;
+			                            position: relative;
+			                            width: 21px;
+
+			                            input {
+			                                position: absolute;
+			                                right: -8px;
+			                                top: -90px;
+			                            }
+			                        }
+			                    }
+			                }
+			            }
+
+			            .ko-grid-pageLinks{
+			                display: none;
+			            }
+			        }
+
+			        p.giftlist-remove-sku {
+			        	text-align: center;
+			            button {
+			                width: 80%;
+			                margin: 0 auto;
+			                padding: 10px 0;
+			                text-align: center;
+			                background: $color5;
+			                color: $white;
+			                font: rem(14px) $font1;
+			                text-transform: uppercase;
+			                font-weight: bold;
+			                border: none;
+			                outline: none;
+			            }
+			        }
+			    }
+			}
+		}
+	}
+}

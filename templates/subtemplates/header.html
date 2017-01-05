@@ -1,0 +1,79 @@
+<header class="pageHeader">
+    <div class="header-top">
+        <div class="item femmina">
+            <a href="">Femmina</a>
+        </div>
+        <div class="item duloren">
+            <a href="">duloren</a>
+        </div>
+    </div>
+    
+    <div class="wrapper">
+        <div class="boxHeader">
+           <div class="menu ico">           
+               <i class="icon-menu lightboxTrigger" data-target="pageMenu" data-position="full"></i>
+               Menu
+           </div>
+
+            <div class="search ico searchToggleBottomTrigger" data-target="searchBox">
+                <i class="icon-search"></i>Buscar
+            </div>    
+    
+            <div class="giftList ico">
+                <a href="/giftlist" title="Lista de desejos">
+                   <i class="icon-giftList"></i>Lista de desejos
+                </a>
+            </div>
+
+            <div class="account ico">
+                <a href="/minha-conta" title="Minha conta">
+                   <i class="icon-heart"></i>Minha conta
+                </a>
+            </div>
+
+           <div class="cart ico">
+               <a href="/checkout/#cart" title="Carrinho" class="cartLink">
+                   <i class="icon-cart"></i>Carrinho
+                   <vtex.cmc:AmountItemsInCart />
+               </a>
+           </div>
+        </div>
+    </div>
+</header>
+
+<div class="searchBox" id="searchBox">
+    <div class="searchBoxOverlay"></div>
+    
+    <div class="searchBoxContent">
+        <div class="wrapper">
+            <vtex.cmc:fullTextSearchBox/>
+        </div>
+    </div>
+</div>
+
+<div class="lightbox" id="pageMenu">
+    <div class="lightboxOverlay"></div>
+
+    <div class="lightboxContent">
+        <div class="lightboxAction">
+            <span class="lightboxTriggerClose ico">
+                <i class="icon-close"></i>fechar
+            </span>
+        </div>
+
+        <div class="lightboxContentInner">
+            <div class="lightboxHeader">
+                <vtex.cmc:welcomeMessage/>
+            </div>
+            
+            <vtex.cmc:departmentNavigator/> 
+
+            <div class="otherLinks">
+                <ul>
+                    <li><a href="">Dúvidas frequentes</a></li>
+                    <li><a href="">Entre em contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

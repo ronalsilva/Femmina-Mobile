@@ -1,0 +1,71 @@
+    <!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="pt-br">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <vtex:metaTags/>
+    
+    <vtex:template id="mobile-commonHead-femmina" />
+</head>
+
+<body>
+    <div class="all">
+        <vtex:template id="mobile-header-femmina" />
+        
+        <div id="mainContent">
+            <div  class="wrapper">
+                <div class="mainProductImage">
+                    <div class="imageZoom ico">
+                        <i class="icon-expand"></i> Zoom
+                    </div>
+    
+                    <vtex.cmc:ProductImage zoom="off" />
+                </div>
+            
+                <div class="mainProductInfo">
+                    <h1 class="productTitle"><vtex.cmc:productName/></h1>
+
+                    <p class="codReference"><vtex.cmc:productReference/></p>
+                    
+                    <vtex.cmc:skuPrice/>
+
+                    <div class="measurement">
+                        <span class="measureLink lightboxTrigger" data-target="tabMedidas">
+                            <i class="icon-measure"></i>
+                            Tabela de Medidas
+                        </span>
+                    </div>
+                
+                    <div class="skuSelection">
+                        <vtex.cmc:skuSelection />
+                    </div>
+                    
+                    <div class="buyProductButton">                  
+                        <vtex.cmc:BuyButton />
+                    </div>  
+
+                    <div class="box-giftList">
+                        <a href="/giftlist"><i class="icon-giftList"></i> Adicionar á lista</a>
+                    </div>
+                </div>
+    
+                <section class="productDetails">
+                    <h3>Detalhes do produto</h3>
+                    
+                    <div class="productDetailsContent">
+                        <vtex.cmc:ProductDescription/>
+                        <vtex.cmc:productSpecification/>
+                    </div>
+                </section>
+
+                <section class="featuredProducts shelfCarousel">
+                    <vtex:contentPlaceHolder id="Veja também" />
+                </section>
+            </div>
+        </div>       
+        
+        <vtex:template id="mobile-footer-femmina" />
+    </div><!-- all -->
+    
+    <vtex:template id="mobile-commonBottom-femmina" />
+</body>
+</html>

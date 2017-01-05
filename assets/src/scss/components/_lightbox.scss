@@ -1,0 +1,84 @@
+.lightbox{
+	@include position(fixed, 0);
+	width: 100%;
+	height: 100%;
+	z-index: 99;
+	opacity: 0;
+	visibility: hidden;
+	@include transition(all ease 0.3s);
+	
+	&.lightboxActive{
+		visibility: visible;
+		opacity: 1;
+	}
+
+	&.full{
+		.lightboxOverlay{
+			display: none;
+		}
+		
+		.lightboxContentInner{
+			height: 100%;
+		}
+
+		.lightboxContent{
+			width: 100%;
+			height: 100%;
+			background-color: rgba($lighbtoxContentBg, $lighbtoxContentBgOpacity);
+			@include position(fixed, 0);
+		}
+
+		.lightboxAction{
+			color: $lightboxCloseFullColor;
+			top: 11px;
+			right: 10px;
+		}
+	}
+
+	&.center{
+		.lightboxContentInner{
+			background: $lighbtoxContentBg;
+			padding: 25px;
+		}	
+
+		.lightboxAction{
+			color: $lightboxCloseColor;
+			top: 10px;
+			right: 10px;
+		}
+	}
+
+	.lightboxOverlay{
+		width: 100%;
+		height: 100%;
+		@include position(fixed, 0);
+	    background-color: rgba($lightboxBgOverlay, 0.8);
+	    z-index: 9;
+	}
+
+	.lightboxAction{
+		position: absolute;
+		z-index: 99;
+
+		i{
+			font-size: rem(15px) !important;
+		}
+	}
+
+	.lightboxContent{
+		z-index: 99;
+		position: fixed;
+		overflow-y: auto;
+		overflow-x: hidden;
+	}
+
+	.lightboxHeader{
+	    background: $lightboxHeaderBg;
+	    color: $lightboxHeaderColor;
+	    padding: 20px;
+	}
+
+	.mainTitle{
+		@extend %sectionTitle;
+	}
+}

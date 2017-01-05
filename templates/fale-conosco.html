@@ -1,0 +1,104 @@
+<h2 class="sectionTitle">Fale conosco</h2>
+<p class="complementaryTitle">Sugestões, dúvidas ou reclamações entre em contato</p>
+
+<div class="contact phone">
+	<a href="tel:(21) 1234-5678">
+		<i class="icon-phone"></i>
+		<div class="contactInfo">
+			<p class="tel">(21) 2345-6789</p>
+			<small>De segunda a sexta das 9h as 18h</small>
+		</div>
+	</a>
+</div>
+
+<div class="contact email">
+	<a href="mailto:atendimento@omstore.com.br">
+		<i class="icon-mail"></i>
+		<div class="contactInfo">
+			atendimento@femmina.com.br
+		</div>
+	</a>
+</div>
+
+
+<script src="/arquivos/OmMessageFormatter.js" type="text/javascript"></script>
+<script src="/arquivos/placeholders.jquery.min.js" type="text/javascript"></script>
+<script src="/arquivos/jquery.maskedinput.min.js" type="text/javascript"></script>
+<script src="/arquivos/validate.js" type="text/javascript"></script>
+<link href="/arquivos/faleconosco.css" rel="stylesheet" type="text/css">
+
+
+
+
+
+<div class="center">
+    <div class="page-title">
+      <h2>Ou envie uma mensagem</h2>
+    </div>  
+
+    <div id="hold-success"></div>
+
+    <div class="container">
+          
+      <div class="row">
+          <div class="col-12">
+              <div id="hold-errors"></div>
+          </div>
+      </div>
+          <div id="contact" action="" method="post">        
+          
+              <div class="row">
+                  <div class="col-6"> 
+                      <div class="grpField">
+                          <label for="nome">Nome</label>
+                          <input type="text" class="" name="nome" id="nome" validate="" placeholder="Digite o seu nome">
+                      </div>
+                  </div>                
+                  <div class="col-6"> 
+                      <div class="grpField">
+                          <label for="email">Email</label>
+                          <input type="text" class="" name="email" id="email" validate="" placeholder="Digite seu email">
+                      </div>
+                  </div>
+              </div>
+
+              <div class="row">
+                  <div class="col-6"> 
+                      <div class="grpField">
+                          <label for="telefone">Telefone de contato</label>
+                          <input type="text" class="" name="telefone" id="telefone" validate="" placeholder="digite seu telefone">
+                      </div>
+                  </div>
+                  <div class="col-6"> 
+                      <div class="grpField">
+                          <label for="celular">Celular</label>
+                          <input type="text" class="" name="celular" id="celular" placeholder="digite seu celular">
+                      </div>
+                  </div>                
+              </div>
+
+              <div class="row"> 
+                  <div class="col-12">                     
+                      <div class="grpField">
+                          <label for="assunto">Assunto*</label>
+                          <input type="text" class="" name="assunto" id="assunto" validate="" placeholder="Digite o assunto">
+                      </div>                    
+                   </div>
+              </div>     
+
+              <div class="row"> 
+                  <div class="col-12"> 
+                      <div class="grpField msg">
+                          <label for="mensagem">Mensagem*</label>
+                          <textarea name="mensagem" validate=""  placeholder="Digite a sua mensagem"></textarea>
+                      </div>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-12"> 
+                      <input type="button" name="BTEnvia" value="Enviar mensagem" id="BTEnvia">
+                  </div>
+              </div>
+          </div>
+    </div>
+  </div>

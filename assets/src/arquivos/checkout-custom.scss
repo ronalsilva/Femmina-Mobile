@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+//Frameworks CSS
+@import "bourbon";
+@import "neat";
+
+@import "../scss/base/_config";
+@import "../scss/base/_buttons";
+@import "../scss/base/_titles";
+@import "../scss/base/_fonts";
+@import "../scss/base/_icons";
+@import "../scss/base/_global";
+
+
+body{
+    background: #fff;
+    padding: 0;
+}
+
+.container{
+    width: 95%;
+}
+
+.pageHeader{
+    padding: 7px 0px;
+    background: $headerBg;
+    border-bottom: 3px solid $headerBorder;
+    width: 100%;
+
+    h1{
+        margin: 0;
+    }
+
+    .logo{
+        a{
+            display: block;
+            background: url("/arquivos/original-store-logo.png") no-repeat center;
+            background-size: contain;
+            width: 100%;
+            min-width: 125px;
+            height: 40px;
+            font-size: 0; 
+            margin: 0 auto; 
+        }
+    }
+}
+
+.pageFooter{
+    background: $footerBgColor;
+    color:$footerTxtColor;
+    padding: 10px;
+    width: 100%;
+}
+
+.btn{
+    @extend %primaryButton;
+    box-shadow: none;
+    text-shadow: none;
+    border: none;
+}

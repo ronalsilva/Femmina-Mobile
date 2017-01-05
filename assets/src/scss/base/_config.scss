@@ -1,0 +1,251 @@
+//-----------------------
+
+//PRIMARY VARIABLES
+
+//-----------------------
+
+//color pallete
+$color1: #333333;
+$color2: #6f7693;
+$color3: #ad4d95;
+$color4: #ae1a4f;
+$color5: #9b247c;
+$color6: #999;
+
+$white: #fff;
+$black: #000;
+
+//fonts
+$font1: 'TeXGyreAdventor';
+$font2: 'Open Sans', sans-serif;
+
+
+//----------------------
+
+//DEFINES GRID
+
+//-----------------------
+
+$max-width: 100% !global;
+$grid-columns: 8 !global;
+$visual-grid: true !global;
+$visual-grid-color: #eee !global;
+$visual-grid-index: back !global;
+$visual-grid-opacity: 0.4 !global;
+
+//----------------------
+
+//SETUP VALUES
+
+//-----------------------
+
+// global
+
+$baseFont: rem(13px) $font1;
+$baseFontColor: $color2;
+$baseColorBg: $white;
+$baseLinkColor: $color1;
+
+
+// inputs
+
+$inputBorderColor: $color4;
+$inputTxtColor: #999;
+$inputColorShadow: $color3;
+
+
+// titles
+
+$sectionTitleFont: rem(24px) $font1;
+$sectionTitleColor: $color3;
+
+$pageTitleFont: rem(23px) $font1;
+$pageTitleColor: $color2;
+
+$pageTopColorBorder: #e5e5e5;
+
+
+// buttons
+
+$primaryBtnColorBg: $color1;
+$primaryBtnColorFont: #fff;
+$primaryBtnFont: rem(14px) $font1;
+
+$secondaryBtnColorBg: $color2;
+$secondaryBtnColorFont: #fff;
+$secondaryBtnFont: rem(14px) $font1;
+
+$buyBtnColorBg: $color5;
+$buyBtnColorFont: #fff;
+$buyBtnFont: rem(14px) $font1;
+
+
+// lightbox
+
+$lighbtoxContentBg: #fff;
+$lighbtoxContentBgOpacity: 0.9;
+$lightboxBgOverlay: #000;
+$lightboxHeaderBg: $color2;
+$lightboxHeaderColor: #fff;
+$lightboxCloseColor: #666;
+$lightboxCloseFullColor: #fff;
+
+
+// lightbox telefone
+
+$phoneCallBg: $color1;
+$phoneCallColor: #fff;
+
+
+// accordion
+
+$accordionBorderColor: #efefef;
+$accordionTitleFont:   3.3vw $font2;
+$accordionTitleColor: $color1;
+$accordionTitleIconColor: $color3;
+
+
+// alert msgs
+
+$errorColor: $color1;
+
+
+// header 
+
+$headerBg: #fff;
+$headerBorder: #e5e5e5;
+$iconsColor: $color2;
+$cartAmountBg: $color1;
+$cartAmountText: #fff;
+$searchIconActiveColor: $color1;
+
+
+// search box
+
+$searchBoxContentColorBg: #fff; 
+$searchBoxContentIcoColor: $color1; 
+
+
+// search box > autocomplete
+
+$autocompleteBg: #fff;
+$autocompleteBorderColor: $color3;
+
+
+// menu
+
+$menuBorder: #ccc;
+$menuColorLink: $color1;
+$menuIcoColor: $color4;
+
+$bgBackMenu: $color4;
+$colorBackMenu: #fff;
+
+
+// footer
+
+$diferentialsColorTit: $color1;
+$diferentialsColorIco: $color2;
+$diferentialsColorTxt: $color2;
+
+$newsletterColorBtn: $white;
+$newsletterColorInputTxt: #ffcccc;
+
+$footerBgColor: $black;
+$footerBorderColor: $color4;
+$footerTxtColor:#FFF;
+
+$sacColorBorder: $color3;
+$sacColorLink: $black;
+
+$footerInstLinksColor: #FFF;
+
+$footerBackTopColorBg: #fff;
+$footerBackTopColorFont: $color1;
+
+
+// shelf
+
+$shelfBorderColor: transparent;
+$shelfTxtColor: $black;
+$shelfBestPriceColor: $color4;
+$shelfOldPriceColor: #999;
+
+
+// catalog
+
+$resultNumberBg: #fff;
+$resultNumberColor:$color2;
+$featuredCategoriesColorTxt:$color2;
+
+
+// switch view
+
+$selectViewColorBg: transparent;
+$selectViewColorBtBg: transparent;
+$selectViewColorBtTxt: $color6;
+$selectViewColorBtActiveBg:#FFF;
+$selectViewColorBtActiveTxt: $black;
+
+
+// filter
+
+$filterRefineBoxBg: transparent;
+$refineSearchTxtColor: $color2;
+$refineSearchBorderColor: $color3;
+$refineSearchItemFont: rem(17px) $font1;
+
+
+// empty search
+
+$emptySearchColorTitle:$color1;
+$emptySearchColorTxt:$color1;
+
+
+// social
+
+$colorShareLink: $color2;
+
+
+// product
+
+$productImageBorderColor: $color4;
+$productShareColor: #999;
+$productNameFont: rem(20px) $font2;
+$productNameColor: $color1;
+$productBestPriceColor: $color5;
+$productOldPriceColor: #999;
+$productZoomIconColor: #999;
+
+
+// product > detalhes
+
+$productLoadMoreBg: $color2;
+
+
+// product > notifyme
+
+$notifymeTitleTxtColor: $color1;
+$notifymeTxtColor: $color1;
+
+
+// product > sku selection
+
+$skuBoxSelectColorBg: #f6f6f6;
+$skuBoxSelectColorText: $color2;
+
+$skuItemColorBg: transparent;
+$skuItemColorText: $color1;
+$skuItemPickedColorBg: transparent;
+$skuItemPickedColorText: $color1;
+$skuItemBorder: 1px solid #ccc;
+$skuItemPickedBorder: 1px solid $color1;
+
+
+// account
+
+$myAccountColor: $color4;
+$myAccountBoxBg: #fff;
+$myAccountIconColor: $color5;
+$myAccountWelcomeBg: $color5;
+$myAccountWelcomeColor: #fff;

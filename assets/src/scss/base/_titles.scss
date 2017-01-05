@@ -1,0 +1,31 @@
+/*titles*/
+
+%sectionTitle{
+	font: $sectionTitleFont;
+	color: $sectionTitleColor;
+	text-transform: uppercase;
+	font-weight: 300;
+	text-align: center;
+	margin-bottom: 20px;
+	font-weight: 600;
+
+	span{
+        font-size: rem(12px);
+        display: block;
+        text-transform: none;
+        line-height: 1.5;
+    }
+}
+
+
+%pageTitle{
+	font: $pageTitleFont;
+	color: $pageTitleColor;
+	line-height: 1;
+	font-weight: 300;
+	padding: 0 10px;
+
+	a{
+		color: $pageTitleColor;
+	}
+}

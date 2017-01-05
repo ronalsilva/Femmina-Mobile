@@ -1,0 +1,96 @@
+%baseMenu{
+	border-bottom:1px solid $menuBorder;
+	
+	h3, h4, li{
+		border-top:1px solid $menuBorder;
+		font-size: rem(13px);
+		padding: 0 10px;
+
+		a {
+			color:$menuColorLink;
+            font: rem(20px) $font2;
+			padding: 15px 0;
+			display: block;
+			position: relative;
+		}
+	}
+
+	h3, ul {
+		@include transition(left ease 0.3s);
+	}
+
+	h3{
+		
+		a:after {
+			font-family: 'icomoon';
+			content: "\e911";
+			font-size:rem(11px);
+			position:absolute; 
+			top:50%;
+			margin-top:-5.5px;
+			right:0;
+			color:$menuIcoColor;
+		}
+	} 
+}
+
+
+%navigationMenu{
+    position: relative;
+    border-bottom: 1px solid $menuBorder;
+    
+    h3 {
+        position:relative;
+        left:0;
+        overflow: hidden;
+    }
+   
+    ul {
+        position: absolute;
+        left:100%;
+        width: 0;
+        height: 100%;
+        background: #fff;
+        z-index: 2;
+        top:0;
+    }
+
+    ul.active{
+        width: 100%;
+        overflow: auto;
+        opacity: 1;
+        visibility: visible;
+        left:0;
+
+        .closeMenu{
+            background: $bgBackMenu;
+            color: $colorBackMenu;
+            padding: 15px 0;
+            font-size: rem(14px);
+            position: relative;
+            text-transform: uppercase;
+
+            &:before{
+                font-family: 'icomoon';
+                content: "\e911";
+                @include transform(rotate(-180deg));
+                font-size: rem(15px);
+                color: $colorBackMenu;
+                display: inline-block;
+                vertical-align: middle;
+                margin: 0 20px;
+            }
+        }
+    }
+}
+
+
+%filterMenu{
+    h3{
+        display: none;
+    }
+
+    h5, h5 + ul{
+        display: none;
+    } 
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="pt-br">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <vtex:metaTags/>
+    <vtex:template id="mobile-commonHead-femmina" />
+</head>
+
+<body>  
+    <div class="all">
+        <vtex:template id="mobile-header-femmina" />
+        
+        <div id="mainContent">
+            <div class="wrapper">
+                <div class="topName">
+                    <vtex.cmc:breadCrumb />
+                    <vtex.cmc:searchTitle />
+                </div>
+            
+                <div class="pageContent">
+                    <div class="filterOptions">
+                        <div class="selectView">
+                            <span class="selectViewAction tableView active"  data-layout="table">   <i class="icon-grid-view"></i> Tabela</span>
+                            <span class="selectViewAction listView"          data-layout="list">    <i class="icon-list-view"></i> Lista</span>
+                        </div>
+
+                        <span class="refineSearch lightboxTrigger" data-target="searchFilter" data-position="full">
+                            <i class="icon-filter"></i> Filtrar produtos 
+                        </span>
+                    </div>
+
+                    <vtex.cmc:searchResult layout="0713232c-3b34-4511-a5df-0603a1ec8101" itemCount="2" columnCount="2" /> 
+                </div>
+            </div>
+        </div>
+
+        <div class="lightbox" id="searchFilter">
+            <div class="lightboxOverlay"></div>
+
+            <div class="lightboxContent">
+                <div class="lightboxAction">
+                    <span class="lightboxTriggerClose ico">
+                        <i class="icon-close"></i>fechar
+                    </span>
+                </div>
+
+                <div class="lightboxContentInner">
+                    <div class="lightboxHeader">
+                        <i class="icon-filter"></i> Filtrar produtos 
+                    </div>
+                    
+                    <vtex.cmc:searchNavigator/> 
+                </div>
+            </div>
+        </div>
+
+        <vtex:template id="mobile-footer-femmina" />
+    </div><!-- all -->
+    
+    <script type="text/javascript" src="/arquivos/QD_infinityScroll.min.js" ></script>
+    <vtex:template id="mobile-commonBottom-femmina" />
+</body>
+</html>

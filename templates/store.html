@@ -1,0 +1,111 @@
+<div class="coordinates">
+    <div id="end">
+      <h3>Encontre uma loja</h3>
+      <form class="form-inline" role="form">
+        <button type="button" id="geolocationBtn" class="btn">Pegar sua localização</button>
+        <span>ou</span>
+        <input type="text" id="mapAddress" placeholder="Digite um endereço ou cidade">
+        <button type="button" id="geocodingBtn" class="btn">Buscar</button>
+        
+      </form>
+    </div>
+    <div id="gmapGeocoding"></div>
+</div>
+
+<!-- lojas -->
+<div class="contentStores"> <!-- lojas -->
+    <span class="backButton">Voltar</span>
+    <ul class="accordion">
+        <li class="store ipanema" data-lat="-22.9835873" data-lng="-43.21292489999996">
+            <a href="javascript:void(0)" class="accordion-title">Ipanema</a>
+            <ul class="submenu">
+                <li>
+                    <p class="addressStore">
+                        <strong>Endereço: </strong> 
+                        <span>Rua Visconde de Pirajá, 598 Loja A , Ipanema - Rio de Janeiro - RJ</span>
+                    </p>
+                    <a class="btnCall" href="tel: 5502122379339" title="Entre em contato">
+                        <i class="icon-phone"></i> Ligar
+                    </a>
+                    <button class="seeRoute">Traçar Rota</button>
+                    <a class="sendEmail" href="mailto:" title="Entre em contato">
+                        <i class="icon-email"></i> Enviar e-mail
+                    </a>
+                    <div class="routeWrap">
+                        <span class="menu-anchor" data-id="gmapInstructions1">rota</span>
+                        <div id="gmapGeocoding1" class="mapPlace"></div>
+                        <ul id="gmapInstructions1" class="routePlace"></ul>
+                    </div>
+                </li>
+            </ul>
+        </li>
+        <li class="store shopping-da-gavea" data-lat="-22.975261" data-lng="-43.22858239999999">
+            <a href="javascript:void(0)" class="accordion-title">Ipanema</a>
+            <ul class="submenu">
+                <li>
+                    <p class="addressStore">
+                        <strong>Endereço: </strong> 
+                        <span>Rua Visconde de Pirajá, 598 Loja A , Ipanema - Rio de Janeiro - RJ</span>
+                    </p>
+                    <a class="btnCall" href="tel: 5502122379339" title="Entre em contato">
+                        <i class="icon-phone"></i> Ligar
+                    </a>
+                    <button class="seeRoute">Traçar Rota</button>
+                    <a class="sendEmail" href="mailto:" title="Entre em contato">
+                        <i class="icon-email"></i> Enviar e-mail
+                    </a>
+                    <div class="routeWrap">
+                        <span class="menu-anchor" data-id="gmapInstructions2">rota</span>
+                        <div id="gmapGeocoding2" class="mapPlace"></div>
+                        <ul id="gmapInstructions2" class="routePlace"></ul>
+                    </div>
+                </li>
+            </ul>
+        </li>
+        <li class="store botafogo-praia-shopping" data-lat="-22.957127" data-lng="-43.17688499999997">
+            <a href="javascript:void(0)" class="accordion-title">Ipanema</a>
+            <ul class="submenu">
+                <li>
+                    <p class="addressStore">
+                        <strong>Endereço: </strong> 
+                        <span>Rua Visconde de Pirajá, 598 Loja A , Ipanema - Rio de Janeiro - RJ</span>
+                    </p>
+                    <a class="btnCall" href="tel: 5502122379339" title="Entre em contato">
+                        <i class="icon-phone"></i> Ligar
+                    </a>
+                    <button class="seeRoute">Traçar Rota</button>
+                    <a class="sendEmail" href="mailto:" title="Entre em contato">
+                        <i class="icon-email"></i> Enviar e-mail
+                    </a>
+
+                    <div class="routeWrap">
+                        <span class="menu-anchor" data-id="gmapInstructions3">rota</span>
+                        <div id="gmapGeocoding3" class="mapPlace"></div>
+                        <ul id="gmapInstructions3" class="routePlace"></ul>
+                    </div>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+    
+    
+<div class="loadind-overlay">
+    <div class='loading-ring' style='transform:scale(0.25);'><div></div></div>
+</div>
+<script type="text/javascript">
+    
+    
+    $(document).ready(function(){
+        var OMComponents = new OMComponentsMobile();
+
+        OMComponents.init();
+
+    });
+
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&amp;libraries=places"></script>
+<script src="/arquivos/jquery.geocomplete.js"></script>
+<script src="/arquivos/gmaps.js"></script>
+<script src="/arquivos/stores.js"></script>

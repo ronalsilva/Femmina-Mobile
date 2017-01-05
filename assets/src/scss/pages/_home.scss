@@ -1,0 +1,119 @@
+/* ==========================================================================
+Home
+========================================================================== */
+.mainGallery{
+    .slick-dots{
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+        text-align: center;
+        li {
+            button {
+                padding: 0;
+                border: none;
+                font-size: 0;
+                width: 10px;
+                height: 10px;
+                background: transparent;
+                border-radius: 50%;
+                border: 1px solid $white;
+
+            }
+            &.slick-active {
+                button {
+                    background: $white;
+                }
+            }
+        }
+    }
+}
+
+.diferentials  {
+    background: $color1;
+    .item {
+        text-align: center;
+        i {
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 10px;
+            &.icon-card {
+                &:before {
+                    content: "\e903";
+                    font-family: 'icomoon';
+                    color: $white;
+                    speak: none;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-variant: normal;
+                    text-transform: none;
+                    line-height: 1;
+
+                    /* Better Font Rendering =========== */
+                    -webkit-font-smoothing: antialiased;
+                    -moz-osx-font-smoothing: grayscale;
+                }
+            }
+        }
+        p {
+            color: $white;
+            display: inline-block;
+        }
+    }
+}
+
+.localNav {
+    .menu-departamento{
+        @extend %baseMenu;
+
+        ul{
+            display: none;
+        }
+    }
+}
+
+.featuredProducts.shelfCarousel{
+    margin-top: 30px;
+
+    .slick-slider{
+        .slick-arrow {
+            background: url(/arquivos/bgSetaMobileFemmina.png) no-repeat;
+            position: absolute;
+            top: 30%;
+            padding: 27px 14px;
+            &:before {
+                content: "\e911";
+                font-size: 25px;
+                color: $white;
+            }
+            &.slick-prev {
+            }
+            &.slick-next {
+            }
+        }
+    }
+
+    .slick-dots{
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+        text-align: center;
+        li {
+            button {
+                padding: 0;
+                border: none;
+                font-size: 0;
+                width: 10px;
+                height: 10px;
+                background: transparent;
+                border-radius: 50%;
+                border: 1px solid #999999;
+
+            }
+            &.slick-active {
+                button {
+                    background: #999999;
+                }
+            }
+        }
+    }
+}

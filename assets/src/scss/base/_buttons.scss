@@ -1,0 +1,37 @@
+/*buttons*/
+
+%primaryButton{
+	background: $primaryBtnColorBg;
+	color: $primaryBtnColorFont;
+	font: $primaryBtnFont;
+	text-transform: uppercase;
+	padding: 13px;
+	text-align: center;
+	display: block;
+	font-weight: 300;
+	border-radius: 3px;
+}
+
+%secondaryButton{
+	background: $secondaryBtnColorBg;
+	color: $secondaryBtnColorFont;
+	font: $secondaryBtnFont;
+	text-transform: uppercase;
+	padding: 13px;
+	text-align: center;
+	display: block;
+	font-weight: 300;
+	border-radius: 3px;
+}
+
+%buyActionButton{
+	background: $buyBtnColorBg;
+	color: $buyBtnColorFont;
+	font: $buyBtnFont;
+	text-transform: uppercase;
+	padding: 15px;
+	text-align: center;
+	display: block;
+	font-weight: 300;
+	border-radius: 3px;
+}

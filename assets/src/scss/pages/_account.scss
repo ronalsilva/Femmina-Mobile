@@ -1,0 +1,328 @@
+/* ==========================================================================
+   Account
+   ========================================================================== */
+body.account{
+	font: $baseFont !important; 
+	color: $baseFontColor !important;
+	background: $baseColorBg !important;
+	
+	.row{margin: 0}
+
+	[class*="span"]{
+		max-width: 100%;
+		float: none;
+	}
+
+	[class^="icon-"], [class*=" icon-"]{
+		background: none;
+	}
+
+	.pageHeader, .pageFooter{
+		ul, ol{
+			margin: 0 !important;
+			padding: 0 !important;
+		}
+
+		h1, h2, h3, h4, h5{
+			font-weight: normal;
+			line-height: 1;
+			margin: 0;
+		}
+	}
+
+	.pageHeader{
+		.logo{
+			padding: 0;
+			margin: 0;
+		}
+	}
+
+	.search{
+		margin: 0;
+	}
+
+	.searchBox .fulltext-search-box{
+		box-shadow: none;
+		border-radius: 0;
+		margin-bottom: 0;
+		height: 30px;
+	}
+
+	#mainContent{
+		margin: 0 auto; 
+		font: $baseFont;
+
+		a{
+			color: $baseLinkColor;
+			text-decoration: underline;
+		}
+
+		h4{
+			@extend %sectionTitle;
+			margin-bottom: 20px;
+		}
+	}
+
+
+	/*botoes*/
+	#edit-data-link, .new-address-link .address-update, .orders-link a, .modal-footer .btn-primary{
+		@extend %primaryButton;
+		margin: 10px 0 30px 0;
+		text-decoration: none !important;
+		color: #fff !important;
+		text-shadow: none;
+		box-shadow: none;
+		line-height: 1;
+		display: table;
+		outline: none;
+	}
+
+	/*box meus dados*/
+	.profile-detail-display, .address-display-block{
+		border: 1px solid #ccc;
+		padding: 20px;
+		margin: 25px 0 0 0;
+		@include span-columns(12);
+		background: #fff;
+	}
+
+	/*meu perfil*/
+	.profile-detail-display{
+		h5{
+			font-weight: bold;
+		}
+		
+		.profile-detail-display-info{	
+			span{
+				line-height: 20px;
+
+				.title{
+					font-weight: bold;
+				}
+			}
+		}
+	}
+
+	/*meus enderecos*/
+	.address-display-block{	
+		.address-display-unit{
+			background: #ececec;
+			padding: 15px;
+			margin: 0 15px 15px 0;
+			
+			h5{
+				margin-bottom: 5px;
+			}
+
+			.edit-address-link{
+				a{
+					padding: 5px;
+					display: inline-block;
+					margin-bottom: 10px;
+				}
+			}
+		}
+	}
+
+
+	/*modal*/
+	.modal{
+		width: 100% !important;
+    	height: 100%;
+		max-height: 100%;
+    	top: 0 !important;
+		left: 0 !important;
+		margin-left: 0 !important;
+
+		.modal-header{
+			h3{
+				@extend %sectionTitle;
+				margin-bottom: 0;
+			}
+		}
+		
+		.modal-body{
+			height: 100%;
+		    max-height: 330px;
+		    overflow-x: hidden;
+
+			h5{
+				font-weight: bold;
+				font-size: rem(14px);
+				margin: 10px 0 15px 5px;
+			}
+
+			input[type=text]{
+				height: 35px;
+				width: 100%; 
+			}
+			
+			label{
+				display: block;
+				margin-bottom: 7px;
+
+				&.error{
+					float: right;
+					color: #666;
+				}
+			}
+
+			.control-group{
+				margin-bottom: 20px;
+			}
+		}
+
+		.modal-footer{
+			.btn-primary{
+				float: right;
+				margin: 0;
+			}
+
+			.btn-link{
+				@extend %secondaryButton;
+				float: left;
+				padding: 10px;
+			}
+		}
+
+		.profile-detail-form{
+			.control-group{
+				margin: 0 20px 15px 5px;
+
+				&.form-contact-data-email{width: 100%}
+			}
+
+			.form-personal-data-gender{
+				label{
+					display: inline-block;
+					margin-right: 10px;
+				}
+			}
+
+			.form-business-data-name{
+				font-weight: bold;
+				text-decoration: underline;
+			}
+		}
+
+		.address-form{
+			[class*="span"]{margin: 0 10px 20px 0}
+		}
+	}
+
+	.modal-footer .btn-link{
+		@extend %secondaryButton;
+	}
+
+	.content{
+		position: relative;
+
+		& > .span4, & > .span6, & > .span3{margin: 0}
+	}
+	
+	.myorders{
+		.container{
+			width: 100%;
+			padding: 0;
+		}
+
+		.page-header{
+			background: none;
+
+			h1{
+				
+			}
+		}
+
+		.order-header.page-header{padding: 0 15px !important}
+		
+		.myorders-list{
+			a{text-decoration: none !important;}
+		
+			.order-date{color: #000;}
+		} 
+	}
+}
+
+body.orders {
+	background: #fff !important;
+	
+	.vtex-bootstrap .alert {
+  		margin: 0 auto 20px auto;
+  		width: 100%;
+
+  		span {
+  			font-size: rem(14px);
+  		}
+	}
+}
+
+/*home minha conta*/
+body.my-account{
+	.topPage{
+		text-align: center;
+		padding: 20px 0;
+
+		i{
+			color: $myAccountIconColor;
+			font-size: rem(35px);
+			margin-bottom: 10px;
+			display: block;
+		}
+
+		.pageTitle{
+			font: rem(20px ) $font1;
+			color: $color5;
+			text-transform: uppercase;
+			font-weight: 600;
+		}
+	}
+
+	.welcome{
+		background: $myAccountWelcomeBg;
+		color: $myAccountWelcomeColor;
+		text-align: center;
+		margin-top: 20px;
+		padding: 15px 0;
+
+		a{
+			color: $myAccountWelcomeColor;
+		}
+	}
+
+	.myAccountLinks{
+		margin: 10px 0 40px;
+		
+		.boxItem{
+			width: 31%;
+			float: left;
+			text-align: center;
+			border: 1px solid #999;
+			background: $myAccountBoxBg;
+			padding: 30px 0;
+			margin: 2% 1%;
+			border-radius: 2px;
+			
+			a{
+				color: $myAccountColor;
+				display: block;
+			}
+
+			i{
+				display: block;
+				font-size: rem(30px);
+				margin-bottom: 15px;
+			}
+
+			span{
+				display: block;
+			}
+
+			&.center{
+				float: none;
+				clear: both;
+				margin: 0 auto;
+			}
+		}
+	}
+}

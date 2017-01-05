@@ -1,0 +1,10 @@
+/* ==========================================================================
+    Form elementos
+   ========================================================================== */
+input[type=text], select{	
+	padding:12px;
+    border: 1px solid $inputBorderColor;
+    color: $inputTxtColor;
+    @include border-radius(3px);
+    @include box-shadow(0 1px 1px $inputColorShadow);
+}

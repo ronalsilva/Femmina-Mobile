@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <vtex:metaTags/>
+
+    <vtex:template id="mobile-commonHead-femmina" />
+</head>
+
+<body>
+    <div class="all">
+        <vtex:template id="mobile-header-femmina" />
+        
+        <div id="mainContent">
+            <section class="diferentials">
+                <div class="diferentials__item c1">
+                    <i class="icon-card"></i>
+                    <p><strong>3x sem juros</strong> no cartão em todo o site</p>
+                </div>
+                <div class="diferentials__item c2">
+                    <i class="icon-truck"></i>
+                    <p><strong>Frete grátis</strong> compras acima de R$195</p>
+                </div>
+            </section>
+
+            <section class="mainGallery">
+                <vtex:contentPlaceHolder id="Banners carousel" />
+            </section>
+
+            <section class="bannerTwe">
+                <vtex:contentPlaceHolder id="Banners contemporary" />
+            </section>
+
+            <section class="bannerThre mainGallery">
+                <vtex:contentPlaceHolder id="Banners carousel 2" />
+            </section>
+            
+            <div class="wrapper">
+                <section class="featuredProducts shelfCarousel">
+                    <vtex:contentPlaceHolder id="Coleções em destaque" />
+                </section>
+            </div>
+        </div>
+
+        <vtex:template id="mobile-footer-femmina" />
+    </div><!-- all -->
+
+    <vtex:template id="mobile-commonBottom-femmina" />
+</body>
+</html>

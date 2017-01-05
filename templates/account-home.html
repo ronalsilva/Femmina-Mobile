@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="pt-br">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <vtex:template id="mobile-commonHead-femmina" />    
+</head>
+<body>  
+    <div class="all">
+        <vtex:template id="mobile-header-femmina" />
+
+        <div id="mainContent">
+            <div class="wrapper">
+                <div class="topPage">
+                    <i class="icon-heart"></i>
+                    <h1 class="pageTitle">Minha Conta</h1>
+                    
+                    <vtex.cmc:welcomeMessage/>
+                </div>
+                
+                <div class="myAccountLinks">
+                    <div class="boxItem center">
+                        <a href="/account">
+                            <i class="icon-edit"></i>
+                            <span>Meu Cadastro</span>
+                        </a>
+                    </div>
+
+                    <div class="boxItem">
+                        <a href="/account/orders">
+                            <i class="icon-box"></i>
+                            <span>Meus Pedidos</span>
+                        </a>
+                    </div>
+
+                    <div class="boxItem">
+                        <a href="/giftlist">
+                            <i class="icon-heart"></i>
+                            <span>Minhas listas</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <vtex:template id="mobile-footer-femmina" />
+    </div><!-- all -->
+    
+    <vtex:template id="mobile-commonBottom-femmina" />
+</body>
+</html>

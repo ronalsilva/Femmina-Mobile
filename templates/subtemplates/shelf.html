@@ -1,0 +1,43 @@
+#set($id = $product.Id)
+#set($uri = $product.Uri)
+#set($escapedName = $product.HtmlEscapedName)
+#set($evaluationRate = $product.EvaluationRate)
+
+<div class="shelfItem">
+	<div class="productImage">
+		<a title="$escapedName" href="$uri">
+			$product.GetImageTag(30)
+		</a>
+	</div>
+
+	<div class="productInfo">
+		<div class="flags">
+			$product.HightLight
+			$product.DiscountHightLight
+		</div>
+		
+		<p class="productName"><a title="$escapedName" href="$uri">$product.Name</a></p>
+		
+		#if ($product.IsInStock)
+			<div class="productPrice">
+		        <a href="$uri">
+				    #if ($product.HasBestPrice)
+			          <span class="oldPrice"><strong>$product.ListPrice</strong></span>
+			        #end
+			        
+			        <span class="bestPrice">$product.BestPrice</span>		            
+
+			        #if ($product.NumbersOfInstallment > 1)
+			            <span class="installment">
+			                <strong class="numberInstallment">${product.NumbersOfInstallment}x</strong> de <strong class="valueInstallment">$product.InstallmentValue</strong>
+			            </span>
+			        #end
+		        </a>
+	    	</div> 
+		#else
+			<div class="soldOut">
+				<p>Produto esgotado</p>
+			</div>
+		#end
+	</div>
+</div>
