@@ -90,9 +90,8 @@ $(document).ready(function(){
     var feed = new Instafeed({
       get: 'user',
       userId: 3674652645,
-      accessToken: '3674652645.6c73510.8d064b1be41042e6a026ccd566c9efd1',
+      accessToken: '3674652645.41ac242.c4cb227b3e574632be108f10647d1fbe',
       link: 'true',
-      clientId: '6c735109b3374016b1936d76a87f1564',
       limit: '2',
       resolution: 'low_resolution',
       target: 'instafeed',

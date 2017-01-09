@@ -70,7 +70,13 @@ Home
         }
     }
 }
-
+.home {
+    #pageMenu {
+        .lightboxHeader {
+            min-height: 35px;
+        }
+    }
+}
 .featuredProducts.shelfCarousel{
     margin-top: 30px;
 
