@@ -179,6 +179,11 @@ $(document).ready(function(){
 	//CATEGORIA E BUSCA	
 	if($("body").hasClass("category") || $("body").hasClass("search-result")){
 
+        $('.search-multiple-navigator .refino-marca').addClass('refino');
+        $('.search-multiple-navigator .refino label').each(function(index, el) {
+            $(this).append('<span class="checkBox" />');
+        });
+
 		//VALIDA O RESULTADO DO FILTRO AO SELECIONAR
 		OMComponents.filter.validateSearch()
 		

@@ -58,6 +58,22 @@
 		}
 	}
 
+	label {
+		input {
+			
+		}
+		&:before {
+			content: "";
+			display: inline-block;
+			width: 24px;
+			height: 24px;
+			background: url(/arquivos/icon-chekcdFilter.png) no-repeat;
+		}
+		&.active {
+			background: url(/arquivos/icon-chekcdFilter2.png) no-repeat;
+		}
+	}
+
 	h5 {
 		font: $refineSearchItemFont;
 		text-transform: uppercase;
