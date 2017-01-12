@@ -57,20 +57,32 @@
 			border-bottom: 0px;
 		}
 	}
-
+ 
 	label {
+		font-family: $font2;
+		color: #333;
+		text-transform: uppercase;
+		font-size: rem(14px);
 		input {
-			
+			display: none;
 		}
 		&:before {
 			content: "";
 			display: inline-block;
 			width: 24px;
 			height: 24px;
-			background: url(/arquivos/icon-chekcdFilter.png) no-repeat;
+			background: url(/arquivos/checkIconMobile.jpg) no-repeat;
+		    background-position: -24px 0px;
+		    vertical-align: middle;
+		    margin-left: 17px;
+		    margin-right: 5px;
 		}
 		&.active {
-			background: url(/arquivos/icon-chekcdFilter2.png) no-repeat;
+			color: $color3;
+			font-weight: bold;
+			&:before {
+				background-position: 0px 0px;
+			}
 		}
 	}
 
