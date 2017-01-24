@@ -6,6 +6,17 @@
 }
 
 body.institutional{
+
+	p {
+		margin-bottom: 15px;
+		text-align: justify;
+	}
+	.accordionList {
+		.accordionList__item {
+		    padding: 15px 25px;
+		}
+	}
+
 	.topName{
 		padding: 10px 15px;
 		margin-bottom: 25px;
